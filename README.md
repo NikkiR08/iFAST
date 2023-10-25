@@ -1,10 +1,23 @@
-# iFAST
-Rapid antibiotic susceptibility testing for urinary tract infections in secondary care: a cost-effectiveness analysis 
+# RAPID ANTIBIOTIC SUSCEPTIBILITY TESTING FOR URINARY TRACT INFECTIONS IN SECONDARY CARE IN ENGLAND: A COST-EFFECTIVENESS ANALYSIS
 
-Aims 
-To evaluate the impact of a new antibiotic susceptibility test on urinary tract infection (UTI) patient outcomes and costs in secondary care, for example improving prescription of effective antibiotics and financial benefits linked to de-escalation of costly therapy, early discharge from high dependency hospital wards to the community and reducing isolation time for patients with high-risk bacterial isolates. We will perform a cost-effectiveness, from the NHS perspective, to investigate whether this technology is deemed economically efficient in according with pre-defined thresholds of acceptability. 
+### This code is subject to change until publication
 
+## Code authors:
 
-Abstract 
-Diagnostic tests for urinary tract infections (UTIs) can be used to determine if treatment with one out of a range of antibiotics is more likely to be effective at clearing the infection. Results from rapid diagnostics can be delivered to a clinician within about 1 – 2 hours from culture, instead of the current 24 – 48 hours. Rapid diagnostic tests have the potential to improve appropriate antimicrobial usage (AMU) by increasing the potential for earlier tailored treatments, and therefore potentially reduce resistance, as such they are a key tool in the AMR National Action Plan (NAP), with the aim that they can be utilised to both strengthen and measure the stewardship goals of the NAP.  
-Work is being undertaken to show that a new, rapid test for antibiotic susceptibility has a potential application for UTI diagnosis in secondary care, by improving the prescription of effective antibiotics. This potentially also has financial benefits linked to the de-escalation of costly therapy, and early discharge from high dependency hospital wards to the community and by reducing isolation time for patients with high-risk bacterial isolates. A cost-effectiveness analysis will be performed to investigate whether this technology is associated with favourable economic and health outcomes from an NHS perspective using healthcare costs and patient-related outcomes. A discrete-time decision tree model will compare the potential implications of the iFAST technology in the context of the current standard in NHS hospitals in England. The model will be parameterised from relevant clinical studies and expert elicitation and will output various indicators used to assess the effectiveness of the iFAST technology. These indicators include days/type of antibiotic use per patient, quality-adjusted life-years (QALYs), time to diagnosis, average patient length of stay, bed/ICU days saved, and cost-effectiveness thresholds for cost-per-QALY gained. 
+Ross Booton
+
+Nichola Naylor
+
+### paper authors:
+Ross D. Booton, Emily Agnew, Diane Pople, Stephanie Evans, Lucy J. Bock, Mark Sutton, Julie Robotham, Nichola R. Naylor
+
+## citation for code until publication of paper:
+Booton, R. & Naylor, N.(2023) RAPID ANTIBIOTIC SUSCEPTIBILITY TESTING FOR URINARY TRACT INFECTIONS IN SECONDARY CARE IN ENGLAND: A COST-EFFECTIVENESS ANALYSIS. https://github.com/rdbooton/iFAST 
+
+## Aim
+To evaluate the impact of a new antibiotic susceptibility test on urinary tract infection (UTI) patient outcomes and costs in secondary care, for example improving prescription of effective antibiotics and financial benefits linked to de-escalation of costly therapy, early discharge from high dependency hospital wards to the community and reducing isolation time for patients with high-risk bacterial isolates. We will perform a cost-effectiveness, from the NHS perspective, to investigate whether this technology is deemed economically efficient in according with pre-defined thresholds of acceptability.
+
+## Content of this repository:
+- code: contains all the code necessary to run our analyses based on...
+- inputs: contains the input parameter table
+- outputs: contains the output data files and plots 
