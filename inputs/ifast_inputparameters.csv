@@ -1,0 +1,268 @@
+﻿uti_group,age_group,sex_group,abx_scenario,parameter,value,distribution,shape,scale,description,reference - please refer to manuscript for more up to date references,abx_guidelines,updated - deterministic,updated - psa,note for psa,,,,,,,,,,,
+all,all,all,all,n.cycles,10000,NA,,,number of cycles,Assumption,,y,na,,,,,,,,,,,,
+all,all,all,all,cost.standardtest.U,15.67,uniform,11.75,19.59,cost of conducting dipstick + culture (one off),table ref,,y,y,plus minus 25%,,,,,,,,,,,
+all,all,all,all,cost.ifast.U,15.67,uniform,11.75,19.59,cost of conducting dipstick + iFAST (one off),table ref,,y,y,plus minus 25%,,,,,,,,,,,
+all,all,all,all,cost.bed.general,24.6,uniform,18.42,30.78,hourly cost of a general bedday,table ref,,y,y,from literature,,,,,,,,,,,
+all,all,all,all,cost.bed.icu,85.07,uniform,63.8,106.34,hourly cost of an icu bedday,table ref,,y,y,from literature,,,,,,,,,,,
+uncomplicated,all,all,all,prop.uti.icu,0,uniform,0,0.139,proportion of uti patients in icu to weight unit costs,Assumption,,y,y,set max same as deterministic complicated - min 0,,,,,,,,,,,
+complicated_IV,all,all,all,prop.uti.icu,0.139,uniform,0.10425,0.17375,proportion of uti patients in icu to weight unit costs,﻿Eliakim-Raz 2019,,y,y,plus minus 25%,,,,,,,,,,,
+complicated_oral,all,all,all,prop.uti.icu,0.139,uniform,0.10425,0.17375,proportion of uti patients in icu to weight unit costs,﻿Eliakim-Raz 2019,,y,y,plus minus 25%,,,,,,,,,,,
+all,all,all,all,prop.bsi.icu,0.0795,uniform,0.059625,0.099375,proportion of bsi patients in icu,table ref,,y,y,plus minus 25%,,,,,,,,,,,
+all,all,all,all,q.ruti,0.63,beta,129.5527,62.5388,,Nichola thesis,,y,y,thesis,,,,,,,,,,,
+all,all,all,all,q.suti,0.674,beta,147.1142,86.1642,,Nichola thesis,,y,y,thesis,,,,,,,,,,,
+all,all,all,all,q.nouti,0.858,beta,55.6619,9.1594,,Nichola thesis,,y,y,thesis,,,,,,,,,,,
+all,all,all,all,q.bsi.dec,0.18665,lnormal.95,0.047615,0.279975,,used similar distribution as for uti qol decrements,,y,y,used similar distribution as for uti qol decrements,,,,,,,,,,,
+all,all,all,all,p.uti2bsi,0.000003,gamma,0.38954,34470.07,probability of transitioning to bsi,﻿Shallcross 2020,,y,y,literature,,,,,,,,,,,
+all,all,all,all,t.current,49,NA,,,hours for current testing results,48 hours +1,,y,na,,,,,,,,,,,,
+all,all,all,all,t.ifast,6,NA,,,hours for iFAST testing results,5 hours +1,,y,na,,,,,,,,,,,,
+all,all,all,all,r.multip.los,1.08,lnormal.95,0.95,1.23,multiplier of resistance and inappropriate antibiotics,literature,,y,y,"literature -  check log normal vs normal and adapt in next iteration - orignally put lnorm.95 ci 0.95 - 1.23 , although ~ 0.07 for working out SE from those upper and lower bounds and 1.96",,,,,,,,,,,
+all,all,all,all,r.multip.mort,1.3125,uniform,0.984375,1.640625,multiplier of resistance and inappropriate antibiotics,literature,,y,y,plus minus 25%,,,,,,,,,,,
+all,all,all,all,prop.inap,0.27,uniform,0.2,0.35,,literature,,y,y,literature,,,,,,,,,,,
+all,1664,f,all,qaly.death,16.85,NA,,,qaly loss from death (use external qaly loss calculator and plug in),QALY calculator,,y,na,,,,,,,,,,,,
+all,1664,f,all,prop.bsi2die,0.07271,uniform,0.054533,0.090888,proportion of bsi discharges which are dead,HES APC data,,y,y,plus minus 25%,,,,,,,,,,,
+all,1664,f,all,prop.uti2die,0.025395,uniform,0.019046,0.031744,proportion of uti discharges which are dead,HES APC data,,y,y,plus minus 25%,,,,,,,,,,,
+all,1664,f,all,p.uti2discharge_other,0.07347,uniform,0.055102,0.091837,DAILY RISK OF DISCHARGE,HES APC data,,y,y,plus minus 25%,,,,,,,,,,,
+all,1664,f,all,p.bsi2discharge,0.0469,uniform,0.035175,0.058625,DAILY RISK OF DISCHARGE,table ref,,y,y,plus minus 25%,,,,,,,,,,,
+all,1664,m,all,qaly.death,16.85,,,,,QALY calculator,,y,na,,,,,,,,,,,,
+all,1664,m,all,prop.bsi2die,0.085547,uniform,0.06416,0.106933,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,1664,m,all,prop.uti2die,0.035249,uniform,0.026437,0.044061,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,1664,m,all,p.uti2discharge_other,0.046807,uniform,0.035105,0.058509,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,1664,m,all,p.bsi2discharge,0.038128,uniform,0.028596,0.047661,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,f,all,qaly.death,5.77,,,,,Nichola assumption,,y,na,,,,,,,,,,,,
+all,65100,f,all,prop.bsi2die,0.181615,uniform,0.136212,0.227019,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,f,all,prop.uti2die,0.077426,uniform,0.058069,0.096782,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,f,all,p.uti2discharge_other,0.049753,uniform,0.037315,0.062192,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,f,all,p.bsi2discharge,0.043627,uniform,0.03272,0.054534,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,m,all,qaly.death,5.77,,,,,Nichola assumption,,y,,,,,,,,,,,,,
+all,65100,m,all,prop.bsi2die,0.169638,uniform,0.127229,0.212048,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,m,all,prop.uti2die,0.09626,uniform,0.072195,0.120324,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,m,all,p.uti2discharge_other,0.049562,uniform,0.037172,0.061953,,,,y,y,plus minus 25%,,,,,,,,,,,
+all,65100,m,all,p.bsi2discharge,0.043289,uniform,0.032467,0.054112,,,,y,y,plus minus 25%,,,,,,,,,,,
+uncomplicated,1664,f,all,cohort,25768.8,,,,,HES APC data,,y,na,,,,,,,,,,,,
+uncomplicated,1664,f,base,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,base,cost.empiricuti.U,2.15,uniform,0.77,5.79,cost of empiric therapy (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+uncomplicated,1664,f,base,cost.empiricuti.current,1.43,uniform,0.51,3.86,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+uncomplicated,1664,f,base,cost.empiricuti.ifast,0.36,uniform,0.13,0.97,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+uncomplicated,1664,f,base,cost.2ndline.U,6.48,uniform,6.48,9.46,cost of second line (one off),British National Formulary ,pivmecillinam,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+complicated_IV,1664,f,all,cohort,3221.1,,,,,HES APC data,,y,na,,,,,,,,,,,,
+complicated_IV,1664,f,base,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,base,cost.empiricuti.U,51.89,uniform,45.26,51.89,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+complicated_IV,1664,f,base,cost.empiricuti.current,14.83,uniform,12.93,14.83,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+complicated_IV,1664,f,base,cost.empiricuti.ifast,5.58,uniform,2.67,5.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+complicated_IV,1664,f,base,cost.2ndline.U,20.02,uniform,7.42,35,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+uncomplicated,65100,f,all,cohort,95461.6,,,,,HES APC data,,y,na,,,,,,,,,,,,
+uncomplicated,65100,f,base,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,base,cost.empiricuti.U,2.15,uniform,0.77,5.79,cost of empiric therapy (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+uncomplicated,65100,f,base,cost.empiricuti.current,1.43,uniform,0.51,3.86,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+uncomplicated,65100,f,base,cost.empiricuti.ifast,0.36,uniform,0.13,0.97,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+uncomplicated,65100,f,base,cost.2ndline.U,6.48,uniform,6.48,9.46,cost of second line (one off),British National Formulary ,pivmecillinam,y,y,uncomplicated,women,oral,base,nitrofurantoin,100,2,3,pivmecillinam,266.67,3,3
+complicated_IV,65100,f,all,cohort,11932.7,,,,,HES APC data,,y,na,,,,,,,,,,,,
+complicated_IV,65100,f,base,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,base,cost.empiricuti.U,51.89,uniform,45.26,51.89,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,f,base,cost.empiricuti.current,14.83,uniform,12.93,14.83,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,f,base,cost.empiricuti.ifast,5.58,uniform,2.67,5.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,f,base,cost.2ndline.U,20.02,uniform,7.42,35,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,women,IV,base,gentamicin,431,1,7,co-amoxiclav,1200,1,7
+uncomplicated,1664,m,all,cohort,13753.6,,,,,HES APC data,,y,na,,,,,,,,,,,,
+uncomplicated,1664,m,base,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,base,cost.empiricuti.U,5.02,uniform,1.79,13.52,cost of empiric therapy (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+uncomplicated,1664,m,base,cost.empiricuti.current,1.43,uniform,0.51,3.86,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+uncomplicated,1664,m,base,cost.empiricuti.ifast,0.36,uniform,0.13,0.97,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+uncomplicated,1664,m,base,cost.2ndline.U,9.59,uniform,2,14.57,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+complicated_IV,1664,m,all,cohort,1719.2,,,,,HES APC data,,y,na,,,,,,,,,,,,
+complicated_IV,1664,m,base,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,base,cost.empiricuti.U,61.52,uniform,53.66,61.52,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,1664,m,base,cost.empiricuti.current,17.58,uniform,15.33,17.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,1664,m,base,cost.empiricuti.ifast,7.68,uniform,3.2,7.68,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,1664,m,base,cost.2ndline.U,20.02,uniform,7.42,35,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+uncomplicated,65100,m,all,cohort,62132,,,,,HES APC data,,y,na,,,,,,,,,,,,
+uncomplicated,65100,m,base,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,nitrofurantoin,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,base,cost.empiricuti.U,5.02,uniform,1.79,13.52,cost of empiric therapy (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+uncomplicated,65100,m,base,cost.empiricuti.current,1.43,uniform,0.51,3.86,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+uncomplicated,65100,m,base,cost.empiricuti.ifast,0.36,uniform,0.13,0.97,cost of empiric therapy for those that then switch,British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+uncomplicated,65100,m,base,cost.2ndline.U,9.59,uniform,2,14.57,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,uncomplicated,men,oral,base,nitrofurantoin,100,2,7,co-amoxiclav,500/125 ,3,8.5
+complicated_IV,65100,m,all,cohort,7766.5,,,,,HES APC data,,y,na,,,,,,,,,,,,
+complicated_IV,65100,m,base,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,base,cost.empiricuti.U,61.52,uniform,53.66,61.52,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,m,base,cost.empiricuti.current,17.58,uniform,15.33,17.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,m,base,cost.empiricuti.ifast,7.68,uniform,3.2,7.68,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,m,base,cost.2ndline.U,20.02,uniform,7.42,35,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_oral,1664,f,base,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,base,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,1664,f,base,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,1664,f,base,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,1664,f,base,cost.2ndline.U,9.59,uniform,2,14.57,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,f,base,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,base,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,f,base,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,f,base,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,f,base,cost.2ndline.U,9.59,uniform,2,14.57,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,women,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,1664,m,base,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,base,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,1664,m,base,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,1664,m,base,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,1664,m,base,cost.2ndline.U,9.59,uniform,2,14.57,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,m,base,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,base,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,base,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,base,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,base,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,base,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,m,base,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,m,base,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+complicated_oral,65100,m,base,cost.2ndline.U,9.59,uniform,2,14.57,cost of second line (one off),British National Formulary ,co-amoxiclav,y,y,complicated,men,oral,base,cefalexin,500,2.5,8.5,co-amoxiclav,500/125 ,3,8.5
+uncomplicated,1664,f,low_trim,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,f,low_trim,cost.empiricuti.U,0.87,uniform,0.71,2.9,cost of empiric therapy (one off),British National Formulary ,trimethoprim,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+uncomplicated,1664,f,low_trim,cost.empiricuti.current,0.58,uniform,0.47,1.93,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+uncomplicated,1664,f,low_trim,cost.empiricuti.ifast,0.15,uniform,0.12,0.48,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+uncomplicated,1664,f,low_trim,cost.2ndline.U,2.15,uniform,0.77,5.79,cost of second line (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+complicated_IV,1664,f,low_trim,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,f,low_trim,cost.empiricuti.U,51.89,uniform,45.26,51.89,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+complicated_IV,1664,f,low_trim,cost.empiricuti.current,14.83,uniform,12.93,14.83,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+complicated_IV,1664,f,low_trim,cost.empiricuti.ifast,5.58,uniform,2.67,5.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+complicated_IV,1664,f,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+uncomplicated,65100,f,low_trim,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,f,low_trim,cost.empiricuti.U,0.87,uniform,0.71,2.9,cost of empiric therapy (one off),British National Formulary ,trimethoprim,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+uncomplicated,65100,f,low_trim,cost.empiricuti.current,0.58,uniform,0.47,1.93,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+uncomplicated,65100,f,low_trim,cost.empiricuti.ifast,0.15,uniform,0.12,0.48,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+uncomplicated,65100,f,low_trim,cost.2ndline.U,2.15,uniform,0.77,5.79,cost of second line (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,women,oral,low_trim_res,trimethoprim,200,2,3,nitrofurantion,100,2,3
+complicated_IV,65100,f,low_trim,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,f,low_trim,cost.empiricuti.U,51.89,uniform,45.26,51.89,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,women,IV,low_trim_res,gentamicin,431,1,7,trimethoprim,200,2,14
+complicated_IV,65100,f,low_trim,cost.empiricuti.current,14.83,uniform,12.93,14.83,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,women,IV,low_trim_res,gentamicin,431,1,7,trimethoprim,200,2,14
+complicated_IV,65100,f,low_trim,cost.empiricuti.ifast,5.58,uniform,2.67,5.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,women,IV,low_trim_res,gentamicin,431,1,7,trimethoprim,200,2,14
+complicated_IV,65100,f,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,women,IV,low_trim_res,gentamicin,431,1,7,trimethoprim,200,2,14
+uncomplicated,1664,m,low_trim,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,1664,m,low_trim,cost.empiricuti.U,2.03,uniform,1.66,6.77,cost of empiric therapy (one off),British National Formulary ,trimethoprim,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+uncomplicated,1664,m,low_trim,cost.empiricuti.current,0.58,uniform,0.47,1.93,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+uncomplicated,1664,m,low_trim,cost.empiricuti.ifast,0.15,uniform,0.12,0.48,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+uncomplicated,1664,m,low_trim,cost.2ndline.U,5.02,uniform,1.79,13.52,cost of second line (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+complicated_IV,1664,m,low_trim,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,1664,m,low_trim,cost.empiricuti.U,61.52,uniform,53.66,61.52,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,1664,m,low_trim,cost.empiricuti.current,17.58,uniform,15.33,17.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+complicated_IV,1664,m,low_trim,cost.empiricuti.ifast,7.68,uniform,3.2,7.68,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+complicated_IV,1664,m,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+uncomplicated,65100,m,low_trim,r.prev,0.05,uniform,0.02,0.25,prevalence of that resistance profile,r.prev,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,trimethoprim,y,y,,,,,,,,,,,,
+uncomplicated,65100,m,low_trim,cost.empiricuti.U,2.03,uniform,1.66,6.77,cost of empiric therapy (one off),British National Formulary ,trimethoprim,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+uncomplicated,65100,m,low_trim,cost.empiricuti.current,0.58,uniform,0.47,1.93,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+uncomplicated,65100,m,low_trim,cost.empiricuti.ifast,0.15,uniform,0.12,0.48,cost of empiric therapy for those that then switch,British National Formulary ,trimethoprim,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+uncomplicated,65100,m,low_trim,cost.2ndline.U,5.02,uniform,1.79,13.52,cost of second line (one off),British National Formulary ,nitrofurantoin,y,y,uncomplicated,men,oral,low_trim_res,trimethoprim,200,2,7,nitrofurantoin,100,2,7
+complicated_IV,65100,m,low_trim,r.prev,0.09,uniform,0.069,0.11,prevalence of that resistance profile,r.prev,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,gentamicin,y,y,,,,,,,,,,,,
+complicated_IV,65100,m,low_trim,cost.empiricuti.U,61.52,uniform,53.66,61.52,cost of empiric therapy (one off),British National Formulary ,gentamicin,c,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,m,low_trim,cost.empiricuti.current,17.58,uniform,15.33,17.58,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,m,low_trim,cost.empiricuti.ifast,7.68,uniform,3.2,7.68,cost of empiric therapy for those that then switch,British National Formulary ,gentamicin,y,y,complicated,men,IV,base,gentamicin,511,1,7,co-amoxiclav,1200,1,7
+complicated_IV,65100,m,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,men,IV,low_trim_res,gentamicin,511,1,7,trimethoprim,200,2,14
+complicated_oral,1664,f,low_trim,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,f,low_trim,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,f,low_trim,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,f,low_trim,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,f,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,f,low_trim,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,f,low_trim,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,f,low_trim,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,f,low_trim,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,f,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,women,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,m,low_trim,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,1664,m,low_trim,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,m,low_trim,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,m,low_trim,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,m,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,m,low_trim,r.prev,0.13,uniform,0.08,0.18,prevalence of that resistance profile,r.prev,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,low_trim,sensitivity.i,0.95,uniform,0.75,1,sensitivity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,low_trim,specificity.i,0.85,uniform,0.75,1,specificity to that antibiotic - ifast,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,low_trim,sensitivity.c,0.95,uniform,0.75,1,sensitivity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,low_trim,specificity.c,0.85,uniform,0.75,1,specificity to that antibiotic - current,Assumption,cefalexin,y,y,,,,,,,,,,,,
+complicated_oral,65100,m,low_trim,cost.empiricuti.U,2.41,uniform,1.49,3.19,cost of empiric therapy (one off),British National Formulary ,cefalexin,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,m,low_trim,cost.empiricuti.current,0.57,uniform,0.35,0.75,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,m,low_trim,cost.empiricuti.ifast,0.11,uniform,0.07,0.15,cost of empiric therapy for those that then switch,British National Formulary ,cefalexin,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,65100,m,low_trim,cost.2ndline.U,4.06,uniform,3.32,13.53,cost of second line (one off),British National Formulary ,trimethoprim,y,y,complicated,men,oral,low_trim_res,cefalexin,500,2.5,8.5,trimethoprim,200,2,14
+complicated_oral,1664,f,all,cohort,3221.1,,,,,HES APC data,,y,na,,,,,,,,,,,,
+complicated_oral,65100,f,all,cohort,11932.7,,,,,HES APC data,,y,na,,,,,,,,,,,,
+complicated_oral,1664,m,all,cohort,1719.2,,,,,HES APC data,,y,na,,,,,,,,,,,,
+complicated_oral,65100,m,all,cohort,7766.5,,,,,HES APC data,,y,na,,,,,,,,,,,,

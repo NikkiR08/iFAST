@@ -1,0 +1,13 @@
+"","scenario","NMB base","NMB low trim","NMB high prev"
+"1","1664 f base uncomplicated",3.21,3.21,26.66
+"2","1664 m base uncomplicated",2.53,2.53,20.86
+"3","65100 f base uncomplicated",2.5,2.51,20.74
+"4","65100 m base uncomplicated",2.6,2.6,21.47
+"5","1664 f base complicated_IV",7.53,7.55,34.05
+"6","1664 m base complicated_IV",5.89,5.9,26.56
+"7","65100 f base complicated_IV",5.9,5.91,26.65
+"8","65100 m base complicated_IV",6.07,6.08,27.38
+"9","1664 f base complicated_oral",10.91,10.92,33.99
+"10","1664 m base complicated_oral",8.53,8.53,26.51
+"11","65100 f base complicated_oral",8.55,8.56,26.61
+"12","65100 m base complicated_oral",8.79,8.79,27.33

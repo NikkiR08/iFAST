@@ -1,0 +1,25 @@
+"","scenario","intervention","value","bedhours.saved","beddays.saved","scenario_2","scenario_3","size"
+"1","1664 f base complicated_IV","current",1017458.32898727,NA,NA,"Complicated, IV","16-64 females",3221.1
+"2","1664 f base complicated_IV","ifast",1017047.44414135,410.884845916065,17.1202019131694,"Complicated, IV","16-64 females",3221.1
+"3","1664 f base complicated_oral","current",1017208.00415728,NA,NA,"Complicated, Oral","16-64 females",3221.1
+"4","1664 f base complicated_oral","ifast",1016433.78635645,774.217800829443,32.2590750345601,"Complicated, Oral","16-64 females",3221.1
+"5","1664 f base uncomplicated","current",8141666.82252315,NA,NA,"Uncomplicated","16-64 females",25768.8
+"6","1664 f base uncomplicated","ifast",8141286.73205171,380.09047144372,15.8371029768217,"Uncomplicated","16-64 females",25768.8
+"7","1664 m base complicated_IV","current",862691.613650722,NA,NA,"Complicated, IV","16-64 males",1719.2
+"8","1664 m base complicated_IV","ifast",862384.283637641,307.330013080849,12.8054172117021,"Complicated, IV","16-64 males",1719.2
+"9","1664 m base complicated_oral","current",862358.601035526,NA,NA,"Complicated, Oral","16-64 males",1719.2
+"10","1664 m base complicated_oral","ifast",861852.226202548,506.374832978356,21.0989513740982,"Complicated, Oral","16-64 males",1719.2
+"11","1664 m base uncomplicated","current",6904195.13026963,NA,NA,"Uncomplicated","16-64 males",13753.6
+"12","1664 m base uncomplicated","ifast",6903328.95862088,866.171648752876,36.0904853647031,"Uncomplicated","16-64 males",13753.6
+"13","65100 f base complicated_IV","current",5624943.72646425,NA,NA,"Complicated, IV","65-100 females",11932.7
+"14","65100 f base complicated_IV","ifast",5622879.48809957,2064.23836467881,86.009931861617,"Complicated, IV","65-100 females",11932.7
+"15","65100 f base complicated_oral","current",5622860.25479095,NA,NA,"Complicated, Oral","65-100 females",11932.7
+"16","65100 f base complicated_oral","ifast",5619418.64375842,3441.61103252787,143.400459688661,"Complicated, Oral","65-100 females",11932.7
+"17","65100 f base uncomplicated","current",45016205.2353615,NA,NA,"Uncomplicated","65-100 females",95461.6
+"18","65100 f base uncomplicated","ifast",45010711.1222999,5494.11306154728,228.92137756447,"Uncomplicated","65-100 females",95461.6
+"19","65100 m base complicated_IV","current",3675495.83711794,NA,NA,"Complicated, IV","65-100 males",7766.5
+"20","65100 m base complicated_IV","ifast",3674149.41157008,1346.42554786429,56.1010644943453,"Complicated, IV","65-100 males",7766.5
+"21","65100 m base complicated_oral","current",3674130.72075904,NA,NA,"Complicated, Oral","65-100 males",7766.5
+"22","65100 m base complicated_oral","ifast",3671887.64663057,2243.07412847085,93.4614220196187,"Complicated, Oral","65-100 males",7766.5
+"23","65100 m base uncomplicated","current",29414879.5621722,NA,NA,"Uncomplicated","65-100 males",62132
+"24","65100 m base uncomplicated","ifast",29411281.873173,3597.68899925053,149.903708302105,"Uncomplicated","65-100 males",62132
